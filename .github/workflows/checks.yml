@@ -1,5 +1,5 @@
 ---
-name: Checks  
+name: Checks
 
 on: [push]
 
@@ -17,6 +17,9 @@ jobs:
       - name: Install requirements
         run: |
             pip install -r requirements.txt
+      - name: Initialize PostgreSQL
+        run: |
+            
       - name: Run tests
         run: |
             python manage.py wait_for_db

@@ -4,6 +4,10 @@ Database Models.
 from django.db import models
 from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager, PermissionsMixin)
 
+# I created a superuser called admin@example.com and pass: Emily!2013
+
+#btw Django mode is just a database table
+
 class UserManager(BaseUserManager):
     """Manager for users."""
     #we can provide any number of keyworkds arguments and they will be passed int our model (**extraFields)

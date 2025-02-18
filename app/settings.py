@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core', #make sure the core app is added here
+    'rest_framework',
+    'drf_spectacular',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +131,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #defines the user model to be our custom one (we called User, inside core folder, in models.py)
 AUTH_USER_MODEL = 'core.User'
+
+#configures the Django rest framework to use 'drf_spectacular.openapi.AutoSchema' to generate the schema for the auto documentation
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
